@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio JavaScript | IFRN</title>
+</head>
+<body>
+    <header>
+        <div class="cabecalho">
+            <div class="logo">
+                IFRN • JavaScript para a Web
+            </div>
+            <h1>Laboratório de JavaScript</h1>
+            <p>Explore eventos HTML, manipulação do DOM e recursos do objeto window com exemplos interativos.</p>
+        </div>
+    </header>
+    <main>
+        <p>Clique nos botões e observe como o JavaScript altera o conteúdo da página e acessa informações do navegador.</p>
+        <div class="grade">
+            <section class="card">
+                <h2>
+                    <span class="numero">1</span>
+                    Eventos do mouse
+                </h2>
+                <p>Eventos permitem executar uma função quando o usuário interage com a página.</p>
+                <button id="btClique">Clique aqui</button>
+                <button id="btLimpar" class="secundario">limpar</button>
+                <p id="resultadoEvento" class="resultado" aria-live="polite">Aguardando um clique...</p>
+                <p id="areaMouse" class="amostra">Passe o mouse, mova-o ou dê um clique duplo aqui.</p>
+                <p id="resultadoMouse" class="resultado" aria-live="polite">Aguardando interação com o mouse....</p>
+                <p id="posicaoMouse" class="resultado" aria-live="polite">Movimento do mouse: —</p>
+            </section>
+            <section class="card">
+                <h2>
+                    <span class="numero">2</span>
+                    Eventos do teclado
+                </h2>
+                <p>Pressione e solte teclas no campo para observar os eventos.</p>
+                <label for="campoTeclado">Campo teste</label>
+                <input type="text" id="campoTeclado" placeholder="Pressione uma tecla">
+                <p id="resultadoTeclado" class="resultado" aria-live="polite">Aguardando uma tecla...</p>
+            </section>
+            <section class="card">
+                <h2>
+                    <span class="numero">3</span>
+                    Eventos de formulários e campos
+                </h2>
+                <form id="formularioEventos">
+                    <label for="campoNome">Digite seu nome para testar os eventos:</label>
+                    <input type="text" id="campoNome" placeholder="Seu nome">
+                    <button type="submit">Enviar formulário</button>
+                    <p id="saudacao" class="resultado" aria-live="polite">Sua saudação aparecerá aqui.</p>
+                </form>
+                <label for="opcaoEvento">Altere a opção para testar change:</label>
+                <select id="opcaoEvento">
+                    <option value="">Selecione uma opção</option>
+                    <option value="Primeira opção">Primeira opção</option>
+                    <option value="Segunda opção">Segunda opção</option>
+                </select>
+                <p id="resultadoCampo" class="resultado" aria-live="polite">Foque ou altere um campo para testar os eventos.</p>
+                <p id="resultadoFormulario" class="resultado" aria-live="polite">O resultado do formulario aparecerá aqui.</p>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>Atividade prática — JavaScript para a Web • IFRN</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

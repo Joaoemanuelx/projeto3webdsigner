@@ -75,3 +75,61 @@ formularioEventos.addEventListener("submit", function(event) {
     resultadoFormulario.textContent = name ? `Evento submit acionado! Formulário enviado por ${name}` : "Evento submit acionado! Formulário enviado sem nome.";
 });
 
+// funções card 7
+const botaoQuerySelector = document.querySelector("#btQuerySelector");
+const resultadoQuerySelector = document.querySelector("#resultadoQuerySelector");
+
+botaoQuerySelector.addEventListener("click", function() {
+    const titulo = document.querySelector("h1");
+    titulo.style.color = "#0b5ed7";
+    resultadoQuerySelector.textContent = `querySelector() encontrou: "${titulo.textContent}".`;
+});
+
+// funções card 8
+const botaoQuerySelectorAll = document.querySelector("#btQuerySelectorAll");
+const resultadoQuerySelectorAll = document.querySelector("#resultadoQuerySelectorAll");
+
+botaoQuerySelectorAll.addEventListener("click", function() {
+    const itens = document.querySelectorAll(".itemQuerySelectorAll");
+    resultadoQuerySelectorAll.textContent = `querySelectorAll() encontrou ${itens.length} elementos.`;
+});
+
+// funções card 9
+const botaoStyle = document.querySelector("#btStyle");
+const amostraStyle = document.querySelector("#amostraStyle");
+const resultadoStyle = document.querySelector("#resultadoStyle");
+
+botaoStyle.addEventListener("click", function() {
+    amostraStyle.style.color = "#0b5ed7";
+    amostraStyle.style.backgroundColor = "#e7f1ff";
+    amostraStyle.style.fontWeight = "bold";
+    resultadoStyle.textContent = "As propriedades style foram alteradas.";
+});
+
+// funções card 10
+const botaoCreateElement = document.querySelector("#btCreateElement");
+const areaCreateElement = document.querySelector("#areaCreateElement");
+const resultadoCreateElement = document.querySelector("#resultadoCreateElement");
+
+botaoCreateElement.addEventListener("click", function() {
+    const novoElemento = document.createElement("p");
+    novoElemento.textContent = "Novo elemento criado com createElement()!";
+    novoElemento.className = "amostra";
+    areaCreateElement.appendChild(novoElemento);
+    resultadoCreateElement.textContent = "Um novo parágrafo foi adicionado à página.";
+});
+
+// funções card 11
+const botaoAlert = document.querySelector("#btAlert");
+const botaoConfirm = document.querySelector("#btConfirm");
+const resultadoDialogos = document.querySelector("#resultadoDialogos");
+
+botaoAlert.addEventListener("click", function() {
+    alert("Olá! Esta mensagem foi exibida com alert().");
+    resultadoDialogos.textContent = "alert() foi executado.";
+});
+
+botaoConfirm.addEventListener("click", function() {
+    const resposta = confirm("Você confirma esta ação?");
+    resultadoDialogos.textContent = resposta ? "confirm() retornou true: ação confirmada." : "confirm() retornou false: ação cancelada.";
+});

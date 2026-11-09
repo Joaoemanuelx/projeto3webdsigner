@@ -1,6 +1,6 @@
 // funções card 1
-const botaoClique = document.getElementById("btClique");
-const botaoLimpar = document.getElementById("btLimpar");
+const botaoClique = document.getElementById("botaoClique");
+const botaoLimpar = document.getElementById("botaoLimpar");
 const resultadoEvento = document.getElementById("resultadoEvento");
 
 botaoClique.addEventListener("click", function() {
@@ -132,6 +132,66 @@ botaoAlert.addEventListener("click", function() {
 botaoConfirm.addEventListener("click", function() {
     const resposta = confirm("Você confirma esta ação?");
     resultadoDialogos.textContent = resposta ? "confirm() retornou true: ação confirmada." : "confirm() retornou false: ação cancelada.";
+});
+
+// funções card 12
+const amostraConteudo = document.getElementById("amostraConteudo");
+const botaoInnerHTML = document.getElementById("botaoInnerHTML");
+const botaoInnerText = document.getElementById("botaoInnerText");
+const resultadoConteudo = document.getElementById("resultadoConteudo");
+
+botaoInnerHTML.addEventListener("click", function() {
+  amostraConteudo.innerHTML = "<strong>HTML inserido</strong> O texto em negrito foi criado com innerHTML.";
+  resultadoConteudo.textContent = "O navegador interpretou a marcação HTML inserida.";
+});
+
+botaoInnerText.addEventListener("click", function() {
+  amostraConteudo.innerText = "Conteúdo substituído como texto renderizado usando innerText.";
+  resultadoConteudo.textContent = "O conteúdo foi substituído por texto, sem interpretar marcação HTML.";
+});
+
+// funções card 13
+const amostraClasses = document.getElementById("amostraClasses");
+const botaoAdicionarClasse = document.getElementById("botaoAdicionarClasse");
+const botaoRemoverClasse = document.getElementById("botaoRemoverClasse");
+const botaoAlternarClasse = document.getElementById("botaoAlternarClasse");
+const resultadoClasses = document.getElementById("resultadoClasses");
+
+botaoAdicionarClasse.addEventListener("click", function() {
+  amostraClasses.classList.add("destaque");
+  resultadoClasses.textContent = "classList.add() adicionou a classe destaque.";
+});
+
+botaoRemoverClasse.addEventListener("click", function() {
+  amostraClasses.classList.remove("destaque");
+  resultadoClasses.textContent = "classList.remove() removeu a classe destaque.";
+});
+
+botaoAlternarClasse.addEventListener("click", function() {
+  const destaqueAtivo = amostraClasses.classList.toggle("destaque");
+  resultadoClasses.textContent = destaqueAtivo ? "classList.toggle() adicionou a classe destaque." : "classList.toggle() removeu a classe destaque.";
+});
+
+// funções card 14
+const linkAtributo = document.getElementById("linkAtributo");
+const botaoDefinirAtributo = document.getElementById("botaoDefinirAtributo");
+const botaoConsultarAtributo = document.getElementById("botaoConsultarAtributo");
+const botaoRemoverAtributo = document.getElementById("botaoRemoverAtributo");
+const resultadoAtributo = document.getElementById("resultadoAtributo");
+
+botaoDefinirAtributo.addEventListener("click", function() {
+  linkAtributo.setAttribute("style", "display: inline-block; padding: 8px; background-color: #fff2c5; color: #102d63; border-radius: 6px;");
+  resultadoAtributo.textContent = "O atributo style foi definido e o visual do link foi alterado.";
+});
+
+botaoConsultarAtributo.addEventListener("click", function() {
+  const estilo = linkAtributo.getAttribute("style");
+  resultadoAtributo.textContent = estilo ? `getAttribute() retornou: "${estilo}".` : "O atributo style ainda não foi definido.";
+});
+
+botaoRemoverAtributo.addEventListener("click", function() {
+  linkAtributo.removeAttribute("style");
+  resultadoAtributo.textContent = "removeAttribute() removeu o atributo style.";
 });
 
 /* =======================================

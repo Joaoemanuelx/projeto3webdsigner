@@ -1,0 +1,228 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f6fb;
+    color: #1d2939;
+    line-height: 1.6;
+}
+
+/* CABEÇALHO */
+
+header {
+    background: linear-gradient(135deg, #102d63, #1746a2);
+    color: white;
+    padding: 42px 20px;
+    border-bottom: 5px solid #f2b705;
+}
+
+.cabecalho,
+main,
+footer {
+    max-width: 1080px;
+    margin: auto;
+}
+
+.logo {
+    color: #f2b705;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: .8rem;
+}
+
+h1 {
+    margin: 8px 0;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1.1;
+}
+
+header p {
+    max-width: 700px;
+    margin-bottom: 0;
+    color: #e6edff;
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+main {
+    padding: 28px 18px 48px;
+}
+
+/* GRADE DOS CARTÕES */
+
+.grade {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+/* CARTÕES */
+
+.card {
+    background: white;
+    padding: 22px;
+    border-radius: 16px;
+    border: 1px solid #dfe6f0;
+    box-shadow: 0 8px 24px rgba(16, 45, 99, .06);
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #102d63;
+    font-size: 1.25rem;
+}
+
+/* NÚMEROS DOS CARTÕES */
+
+.numero {
+    display: inline-grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    margin-right: 7px;
+    background: #fff2c5;
+    color: #654800;
+    border-radius: 9px;
+    font-size: .9rem;
+}
+
+/* BOTÕES */
+
+button {
+    background: #1746a2;
+    color: white;
+    border: 0;
+    border-radius: 9px;
+    padding: 10px 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px 4px 5px 0;
+    transition: transform .15s, background .15s;
+}
+
+button:hover {
+    background: #102d63;
+    transform: translateY(-1px);
+}
+
+button.secundario {
+    background: #e8eef9;
+    color: #102d63;
+}
+
+/* AGRUPAMENTO DE BOTÕES */
+
+.demo-botoes {
+    margin: 10px 0;
+}
+
+/* CAMPOS DE FORMULÁRIO */
+
+input,
+select {
+    width: 100%;
+    max-width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    font: inherit;
+    margin: 6px 0 10px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #102d63;
+}
+
+/* RESULTADOS */
+
+.resultado {
+    background: #f6f8fc;
+    border-left: 4px solid #f2b705;
+    padding: 12px 14px;
+    border-radius: 6px;
+    min-height: 48px;
+    overflow-wrap: anywhere;
+}
+
+/* AMOSTRAS DE CONTEÚDO */
+
+.amostra {
+    padding: 12px;
+    border: 1px dashed #b8c6dc;
+    border-radius: 9px;
+    margin: 10px 0;
+}
+
+/* PARÁGRAFOS DO DOM */
+
+.paragrafo-dom {
+    padding: 12px;
+    border: 1px dashed #b8c6dc;
+    border-radius: 9px;
+    margin: 10px 0;
+}
+
+/* LISTA DE ELEMENTOS CRIADOS */
+
+#listaItens {
+    padding-left: 22px;
+}
+
+#listaItens li {
+    margin: 4px 0;
+}
+
+/* DESTAQUE DE CLASSE CSS */
+
+.destaque {
+    background: #fff2c5;
+    padding: 3px 6px;
+    border-radius: 4px;
+}
+
+/* ELEMENTOS DE CÓDIGO */
+
+code {
+    background: #e8eef9;
+    color: #102d63;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+/* LINK DO CARD DE ATRIBUTOS */
+
+#linkAtributo {
+    display: inline-block;
+    margin: 8px 0;
+}
+
+/* RODAPÉ */
+
+footer {
+    padding: 0 18px 28px;
+    color: #53647d;
+    font-size: .9rem;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 700px) {
+
+    .grade {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        padding: 32px 18px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+}

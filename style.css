@@ -10,7 +10,6 @@ body {
     line-height: 1.6;
 }
 
-/* CABEÇALHO */
 
 header {
     background: linear-gradient(135deg, #102d63, #1746a2);
@@ -46,13 +45,11 @@ header p {
     color: #e6edff;
 }
 
-/* CONTEÚDO PRINCIPAL */
 
 main {
     padding: 28px 18px 48px;
 }
 
-/* GRADE DOS CARTÕES */
 
 .grade {
     display: grid;
@@ -60,7 +57,6 @@ main {
     gap: 18px;
 }
 
-/* CARTÕES */
 
 .card {
     background: white;
@@ -76,7 +72,6 @@ main {
     font-size: 1.25rem;
 }
 
-/* NÚMEROS DOS CARTÕES */
 
 .numero {
     display: inline-grid;
@@ -90,7 +85,6 @@ main {
     font-size: .9rem;
 }
 
-/* BOTÕES */
 
 button {
     background: #1746a2;
@@ -114,13 +108,11 @@ button.secundario {
     color: #102d63;
 }
 
-/* AGRUPAMENTO DE BOTÕES */
 
-.demo-botoes {
+/* .demo-botoes {
     margin: 10px 0;
-}
+} */
 
-/* CAMPOS DE FORMULÁRIO */
 
 input,
 select {
@@ -139,8 +131,6 @@ label {
     color: #102d63;
 }
 
-/* RESULTADOS */
-
 .resultado {
     background: #f6f8fc;
     border-left: 4px solid #f2b705;
@@ -150,7 +140,6 @@ label {
     overflow-wrap: anywhere;
 }
 
-/* AMOSTRAS DE CONTEÚDO */
 
 .amostra {
     padding: 12px;
@@ -159,34 +148,31 @@ label {
     margin: 10px 0;
 }
 
-/* PARÁGRAFOS DO DOM */
 
-.paragrafo-dom {
+/* .paragrafo-dom {
     padding: 12px;
     border: 1px dashed #b8c6dc;
     border-radius: 9px;
     margin: 10px 0;
-}
+} */
 
-/* LISTA DE ELEMENTOS CRIADOS */
 
-#listaItens {
+/* #listaItens {
     padding-left: 22px;
-}
+} */
 
-#listaItens li {
+
+/* #listaItens li {
     margin: 4px 0;
-}
+} */
 
-/* DESTAQUE DE CLASSE CSS */
 
-.destaque {
+/* .destaque {
     background: #fff2c5;
     padding: 3px 6px;
     border-radius: 4px;
-}
+} */
 
-/* ELEMENTOS DE CÓDIGO */
 
 code {
     background: #e8eef9;
@@ -195,14 +181,12 @@ code {
     border-radius: 4px;
 }
 
-/* LINK DO CARD DE ATRIBUTOS */
 
-#linkAtributo {
+/* #linkAtributo {
     display: inline-block;
     margin: 8px 0;
-}
+} */
 
-/* RODAPÉ */
 
 footer {
     padding: 0 18px 28px;
@@ -210,7 +194,6 @@ footer {
     font-size: .9rem;
 }
 
-/* RESPONSIVIDADE */
 
 @media (max-width: 700px) {
 

@@ -66,6 +66,7 @@ main {
     box-shadow: 0 8px 24px rgba(16, 45, 99, .06);
 }
 
+
 .card h2 {
     margin-top: 0;
     color: #102d63;
@@ -98,20 +99,17 @@ button {
     transition: transform .15s, background .15s;
 }
 
+
 button:hover {
     background: #102d63;
     transform: translateY(-1px);
 }
 
+
 button.secundario {
     background: #e8eef9;
     color: #102d63;
 }
-
-
-/* .demo-botoes {
-    margin: 10px 0;
-} */
 
 
 input,
@@ -125,11 +123,13 @@ select {
     margin: 6px 0 10px;
 }
 
+
 label {
     display: block;
     font-weight: bold;
     color: #102d63;
 }
+
 
 .resultado {
     background: #f6f8fc;
@@ -149,43 +149,12 @@ label {
 }
 
 
-/* .paragrafo-dom {
-    padding: 12px;
-    border: 1px dashed #b8c6dc;
-    border-radius: 9px;
-    margin: 10px 0;
-} */
-
-
-/* #listaItens {
-    padding-left: 22px;
-} */
-
-
-/* #listaItens li {
-    margin: 4px 0;
-} */
-
-
-/* .destaque {
-    background: #fff2c5;
-    padding: 3px 6px;
-    border-radius: 4px;
-} */
-
-
 code {
     background: #e8eef9;
     color: #102d63;
     padding: 2px 5px;
     border-radius: 4px;
 }
-
-
-/* #linkAtributo {
-    display: inline-block;
-    margin: 8px 0;
-} */
 
 
 footer {

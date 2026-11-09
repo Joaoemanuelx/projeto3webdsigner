@@ -133,3 +133,116 @@ botaoConfirm.addEventListener("click", function() {
     const resposta = confirm("Você confirma esta ação?");
     resultadoDialogos.textContent = resposta ? "confirm() retornou true: ação confirmada." : "confirm() retornou false: ação cancelada.";
 });
+
+/* =======================================
+   4. EVENTOS LOAD E SCROLL
+======================================= */
+
+const resultadoLoad = document.getElementById("resultadoLoad");
+const resultadoScroll = document.getElementById("resultadoScroll");
+
+function paginaCarregada() {
+  resultadoLoad.textContent =
+    "Evento load acionado! A página foi carregada.";
+}
+
+if (document.readyState === "complete") {
+  paginaCarregada();
+} else {
+  window.addEventListener("load", paginaCarregada);
+}
+
+window.addEventListener("scroll", function () {
+  const posicao = Math.round(window.scrollY);
+
+  resultadoScroll.textContent =
+    `Evento scroll acionado! Posição vertical: ${posicao} px.`;
+}, { passive: true });
+
+
+/* =======================================
+   5. SELECIONAR E MODIFICAR O DOM
+======================================= */
+
+const paragrafo = document.getElementById("paragrafoPrincipal");
+const resultadoDOM = document.getElementById("resultadoDOM");
+
+// Alterar texto
+document.getElementById("btnTexto").addEventListener("click", function () {
+  paragrafo.textContent = "O texto foi alterado pelo JavaScript!";
+
+  resultadoDOM.textContent = "Texto alterado com sucesso!";
+});
+
+// Mudar cor
+document.getElementById("btnCor").addEventListener("click", function () {
+  const corAtual = paragrafo.style.color;
+
+  paragrafo.style.color =
+    corAtual === "red" ? "#071d4e" : "red";
+
+  resultadoDOM.textContent = "A cor do parágrafo foi modificada!";
+});
+
+// Ocultar ou mostrar
+document.getElementById("btnOcultar").addEventListener("click", function () {
+  paragrafo.hidden = !paragrafo.hidden;
+
+  this.textContent = paragrafo.hidden
+    ? "Mostrar parágrafo"
+    : "Ocultar parágrafo";
+
+  resultadoDOM.textContent = paragrafo.hidden
+    ? "Parágrafo ocultado!"
+    : "Parágrafo exibido!";
+});
+
+// Contar parágrafos da demonstração
+document.getElementById("btnContar").addEventListener("click", function () {
+  const paragrafos = document.querySelectorAll(
+    ".exemplos-js .paragrafo-dom"
+  );
+
+  resultadoDOM.textContent =
+    `Foram encontrados ${paragrafos.length} parágrafos no exemplo.`;
+});
+
+
+/* =======================================
+   6. CRIAR ELEMENTOS HTML
+======================================= */
+
+const campoItem = document.getElementById("novoItem");
+const lista = document.getElementById("listaItens");
+
+// Criar novos elementos
+document.getElementById("btnAdicionar").addEventListener("click", function () {
+  const texto = campoItem.value.trim();
+
+  if (texto === "") {
+    alert("Digite um texto antes de adicionar!");
+    return;
+  }
+
+  const novoElemento = document.createElement("li");
+
+  novoElemento.textContent = texto;
+
+  lista.appendChild(novoElemento);
+
+  campoItem.value = "";
+  campoItem.focus();
+});
+
+// Limpar lista
+document.getElementById("btnLimpar").addEventListener("click", function () {
+  lista.replaceChildren();
+});
+
+// Adicionar pressionando Enter
+campoItem.addEventListener("keydown", function (evento) {
+  if (evento.key === "Enter") {
+    evento.preventDefault();
+    document.getElementById("btnAdicionar").click();
+  }
+});

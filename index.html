@@ -117,6 +117,89 @@
     <footer>
         <p>Atividade prática — JavaScript para a Web • IFRN</p>
     </footer>
-    <script src="script.js"></script>
+   
+    
+<div class="exemplos-js">
+
+  <!-- 4. EVENTOS DE CARREGAMENTO E ROLAGEM -->
+  <section class="demo-card">
+    <h2><span class="numero">4</span> Eventos de carregamento e rolagem</h2>
+
+    <p>O carregamento da página e a rolagem também podem acionar eventos.</p>
+
+    <div class="resultado" id="resultadoLoad">
+      Aguardando carregamento...
+    </div>
+
+    <div class="resultado" id="resultadoScroll">
+      Role a página para acionar o evento scroll.
+    </div>
+  </section>
+
+  <div class="demo-grid">
+
+    <!-- 5. SELECIONAR E MODIFICAR O DOM -->
+    <section class="demo-card">
+      <h2><span class="numero">5</span> Selecionar e modificar o DOM</h2>
+
+      <p>O DOM permite localizar elementos HTML e mudar seu conteúdo ou estilo.</p>
+
+      <p class="paragrafo-dom" id="paragrafoPrincipal">
+        Este parágrafo será modificado pelo JavaScript.
+      </p>
+
+      <div class="demo-botoes">
+        <button type="button" id="btnTexto">Alterar texto</button>
+        <button type="button" id="btnCor">Mudar cor</button>
+        <button type="button" class="secundario" id="btnOcultar">
+          Ocultar parágrafo
+        </button>
+      </div>
+
+      <p class="paragrafo-dom" id="segundoParagrafo">
+        Este é um segundo parágrafo, selecionado junto com os demais.
+      </p>
+
+      <button type="button" class="secundario" id="btnContar">
+        Contar parágrafos
+      </button>
+
+      <div class="resultado" id="resultadoDOM">
+        Os resultados do DOM aparecerão aqui.
+      </div>
+    </section>
+
+    <!-- 6. CRIAR ELEMENTOS HTML -->
+    <section class="demo-card">
+      <h2><span class="numero">6</span> Criar elementos HTML</h2>
+
+      <p>
+        Com <code>document.createElement()</code>, podemos criar
+        elementos e adicioná-los ao documento.
+      </p>
+
+      <label for="novoItem">Texto do novo item</label>
+
+      <input
+        type="text"
+        id="novoItem"
+        placeholder="Ex.: Aprender JavaScript"
+      >
+
+      <div class="demo-botoes">
+        <button type="button" id="btnAdicionar">Adicionar item</button>
+        <button type="button" class="secundario" id="btnLimpar">
+          Limpar lista
+        </button>
+      </div>
+
+      <ul id="listaItens">
+        <li>Este item já existia no HTML.</li>
+      </ul>
+    </section>
+
+  </div>
+</div>
+ <script src="script.js"></script>
 </body>
 </html>

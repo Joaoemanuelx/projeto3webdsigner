@@ -31,7 +31,7 @@
     <main>
         <p>Clique nos botões e observe como o JavaScript altera o conteúdo da página e acessa informações do navegador.</p>
         <div class="grade">
-            <section class="card">
+            <section class="card" id="eventos-mouse">
                 <h2>
                     <span class="numero">1</span>
                     Eventos do mouse
@@ -44,7 +44,7 @@
                 <p id="resultadoMouse" class="resultado" aria-live="polite">Aguardando interação com o mouse....</p>
                 <p id="posicaoMouse" class="resultado" aria-live="polite">Movimento do mouse: —</p>
             </section>
-            <section class="card">
+            <section class="card" id="eventos-teclado">
                 <h2>
                     <span class="numero">2</span>
                     Eventos do teclado
@@ -54,7 +54,7 @@
                 <input type="text" id="campoTeclado" placeholder="Pressione uma tecla">
                 <p id="resultadoTeclado" class="resultado" aria-live="polite">Aguardando uma tecla...</p>
             </section>
-            <section class="card">
+            <section class="card" id="formularios">
                 <h2>
                     <span class="numero">3</span>
                     Eventos de formulários e campos
@@ -74,7 +74,7 @@
                 <p id="resultadoCampo" class="resultado" aria-live="polite">Foque ou altere um campo para testar os eventos.</p>
                 <p id="resultadoFormulario" class="resultado" aria-live="polite">O resultado do formulario aparecerá aqui.</p>
             </section>
-            <section class="card">
+            <section class="card" id="query-selector">
                 <h2>
                     <span class="numero">4</span>
                     querySelector()
@@ -83,7 +83,7 @@
                 <button id="btQuerySelector">Selecionar elemento</button>
                 <p id="resultadoQuerySelector" class="resultado" aria-live="polite">Aguardando uma seleção...</p>
             </section>
-            <section class="card">
+            <section class="card" id="query-selector-all">
                 <h2>
                     <span class="numero">5</span>
                     querySelectorAll()
@@ -95,7 +95,7 @@
                 <p class="itemQuerySelectorAll">Item 3</p>
                 <p id="resultadoQuerySelectorAll" class="resultado" aria-live="polite">Aguardando uma contagem...</p>
             </section>
-            <section class="card">
+            <section class="card" id="style">
                 <h2>
                     <span class="numero">6</span>
                     style
@@ -105,7 +105,7 @@
                 <p id="amostraStyle" class="amostra">Este texto terá o estilo alterado.</p>
                 <p id="resultadoStyle" class="resultado" aria-live="polite">Aguardando alteração de estilo...</p>
             </section>
-            <section class="card">
+            <section class="card" id="create-element">
                 <h2>
                     <span class="numero">7</span>
                     createElement()
@@ -115,7 +115,7 @@
                 <div id="areaCreateElement"></div>
                 <p id="resultadoCreateElement" class="resultado" aria-live="polite">Aguardando criação...</p>
             </section>
-            <section class="card">
+            <section class="card" id="dialogos">
                 <h2>
                     <span class="numero">8</span>
                     alert() e confirm()

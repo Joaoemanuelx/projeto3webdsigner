@@ -228,6 +228,10 @@ footer p {
     color: #a9d66b;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Responsividade para celulares */
 @media (max-width: 700px) {
     .grade {

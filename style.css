@@ -1,177 +1,249 @@
+
+/* Configurações gerais */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #f3f6fb;
-    color: #1d2939;
+    background-color: #f2f4f5;
+    color: #333;
     line-height: 1.6;
 }
 
-
+/* Cabeçalho */
 header {
-    background: linear-gradient(135deg, #102d63, #1746a2);
+    background-color: #075b35;
     color: white;
-    padding: 42px 20px;
-    border-bottom: 5px solid #f2b705;
+    padding: 35px 20px;
+    border-bottom: 5px solid #8bbf35;
 }
 
-.cabecalho,
-main,
-footer {
-    max-width: 1080px;
+.cabecalho {
+    max-width: 1100px;
     margin: auto;
 }
 
 .logo {
-    color: #f2b705;
+    font-size: 14px;
     font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-size: .8rem;
+    margin-bottom: 15px;
+    color: #d5e8dc;
 }
 
-h1 {
-    margin: 8px 0;
-    font-size: clamp(2rem, 5vw, 3.2rem);
-    line-height: 1.1;
+header h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
 }
 
 header p {
-    max-width: 700px;
-    margin-bottom: 0;
-    color: #e6edff;
+    font-size: 15px;
+    color: #e2eee6;
 }
 
-
+/* Conteúdo principal */
 main {
-    padding: 28px 18px 48px;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
 }
 
+main > p {
+    margin-bottom: 25px;
+    color: #555;
+}
 
+/* Grade dos cards */
 .grade {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
-
+/* Cards */
 .card {
-    background: white;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
     padding: 22px;
-    border-radius: 16px;
-    border: 1px solid #dfe6f0;
-    box-shadow: 0 8px 24px rgba(16, 45, 99, .06);
 }
-
 
 .card h2 {
-    margin-top: 0;
-    color: #102d63;
-    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 19px;
+    color: #075b35;
+    margin-bottom: 12px;
 }
 
+.card > p,
+.card form > p {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
 
 .numero {
-    display: inline-grid;
-    place-items: center;
-    width: 32px;
-    height: 32px;
-    margin-right: 7px;
-    background: #fff2c5;
-    color: #654800;
-    border-radius: 9px;
-    font-size: .9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30px;
+    height: 30px;
+    background-color: #075b35;
+    color: white;
+    border-radius: 4px;
+    font-size: 15px;
 }
 
-
+/* Botões */
 button {
-    background: #1746a2;
+    background-color: #087443;
     color: white;
-    border: 0;
-    border-radius: 9px;
-    padding: 10px 14px;
-    font-weight: bold;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-size: 14px;
     cursor: pointer;
     margin: 5px 4px 5px 0;
-    transition: transform .15s, background .15s;
+    transition: background-color 0.2s;
 }
-
 
 button:hover {
-    background: #102d63;
-    transform: translateY(-1px);
+    background-color: #055c34;
 }
 
+button:active {
+    transform: scale(0.98);
+}
 
 button.secundario {
-    background: #e8eef9;
-    color: #102d63;
+    background-color: #626b70;
 }
 
+button.secundario:hover {
+    background-color: #454c50;
+}
+
+/* Campos de formulário */
+label {
+    display: block;
+    font-size: 14px;
+    margin: 12px 0 5px;
+    font-weight: bold;
+}
 
 input,
 select {
     width: 100%;
-    max-width: 100%;
-    padding: 11px 12px;
-    border: 1px solid #cbd5e1;
-    border-radius: 9px;
-    font: inherit;
-    margin: 6px 0 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: white;
+    margin-bottom: 10px;
 }
 
-
-label {
-    display: block;
-    font-weight: bold;
-    color: #102d63;
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #087443;
+    box-shadow: 0 0 0 2px rgba(8, 116, 67, 0.12);
 }
 
+/* Áreas de demonstração */
+.amostra {
+    background-color: #f0f5f1;
+    border-left: 4px solid #087443;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 3px;
+    font-size: 14px;
+}
 
 .resultado {
-    background: #f6f8fc;
-    border-left: 4px solid #f2b705;
-    padding: 12px 14px;
-    border-radius: 6px;
-    min-height: 48px;
+    background-color: #f4f5f5;
+    border: 1px solid #e2e4e4;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #454545;
+    min-height: 38px;
     overflow-wrap: anywhere;
 }
 
-
-.amostra {
-    padding: 12px;
-    border: 1px dashed #b8c6dc;
-    border-radius: 9px;
-    margin: 10px 0;
+/* Itens do querySelectorAll */
+.itemQuerySelectorAll {
+    background-color: #f0f5f1;
+    border-left: 3px solid #8bbf35;
+    padding: 7px 10px;
+    margin: 7px 0;
+    font-size: 14px;
 }
 
-
-code {
-    background: #e8eef9;
-    color: #102d63;
-    padding: 2px 5px;
-    border-radius: 4px;
+/* Área de criação de elementos */
+#areaCreateElement {
+    margin-top: 10px;
 }
 
-
+/* Rodapé */
 footer {
-    padding: 0 18px 28px;
-    color: #53647d;
-    font-size: .9rem;
+    background-color: #e3e8e5;
+    color: #555;
+    text-align: center;
+    padding: 18px;
+    margin-top: 40px;
+    border-top: 1px solid #d3d9d5;
 }
 
+footer p {
+    font-size: 13px;
+}
 
+.menu {
+    background-color: #064b2d;
+    padding: 12px 20px;
+}
+
+.menu ul {
+    max-width: 1100px;
+    margin: auto;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 25px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.menu a:hover {
+    color: #a9d66b;
+}
+
+/* Responsividade para celulares */
 @media (max-width: 700px) {
-
     .grade {
         grid-template-columns: 1fr;
     }
 
     header {
-        padding: 32px 18px;
+        padding: 25px 20px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    main {
+        margin: 20px auto;
     }
 
     .card {

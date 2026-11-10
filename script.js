@@ -23,10 +23,6 @@ areaMouse.addEventListener("mouseout", function() {
     resultadoMouse.textContent = 'Evento mouseout acionado! O mouse saiu da área.';
 });
 
-areaMouse.addEventListener("dblclick", function() {
-    resultadoMouse.textContent = 'Evento dblclick acionado! Você deu um clique duplo.';
-});
-
 areaMouse.addEventListener("mousemove", function(event) {
     posicaoMouse.textContent = `Posição ${event.clientX}, ${event.clientY}`;
 });
@@ -46,27 +42,12 @@ campoTeclado.addEventListener("keyup", function(event) {
 // funções card 3
 const campoNome = document.getElementById("campoNome");
 const saudacao = document.getElementById("saudacao");
-const resultadoCampo = document.getElementById("resultadoCampo");
 const resultadoFormulario = document.getElementById("resultadoFormulario");
-const opcaoEvento = document.getElementById("opcaoEvento");
 const formularioEventos = document.getElementById("formularioEventos");
 
 campoNome.addEventListener("input", function(event) {
     const nome = event.target.value.trim();
     saudacao.textContent = nome ? `Olá, ${nome}! voce acionou o evento input.` : "Digite seu nome para ver a saudação.";
-});
-
-campoNome.addEventListener("focus", function() {
-    resultadoCampo.textContent = "Evento focus acionado! O campo recebeu foco.";
-});
-
-campoNome.addEventListener("blur", function() {
-    resultadoCampo.textContent = "Evento blur acionado! O campo perdeu foco.";
-});
-
-opcaoEvento.addEventListener("change", function(event) {
-    const opcaoSelecionada = event.target.value;
-    resultadoCampo.textContent = `Evento change acionado! Opção selecionada: ${opcaoSelecionada}`;
 });
 
 formularioEventos.addEventListener("submit", function(event) {
